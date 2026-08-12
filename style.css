@@ -15,7 +15,7 @@
     --social-links-bg: rgba(255, 255, 255, 0.363);
     --footer-link-color: white;
     --footer-color:white;
-    --bg-url-mobile: url('./assets/bg-desk-mobile-mobile.png');
+    --bg-url-mobile: url('./assets/bg-desk-mobile.png');
      
 }
 
@@ -30,19 +30,11 @@
     --social-links-bg: rgba(0, 0, 0, 0.5); 
     --footer-link-color: white;
     --footer-color: rgb(211, 211, 211); 
-    --bg-url-mobile:url('./assets/bg-desk-mobile.png');
-  }
-
-  body{
-    background: var(--bg-url) no-repeat top center/cover;
-
+    --bg-url-mobile:url('./assets/bg-desk-dark-mobile.png');
   }
 
 body {
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background: var(--bg-url) no-repeat top center/cover;
     font-family: arial, sans-serif;
     color: white;
     display: flex;
@@ -50,14 +42,13 @@ body {
     align-items: center;
     min-height: 150vh;
     padding: 40px 20px;
-
 }
 
 @media (max-width: 768px) {
-    html {
+    body {
+        background-image: var(--bg-url-mobile);
         background-position: center top;
         background-size: 300% auto;
-        background-image: var(--bg-url-mobile);
     }
 }
 
