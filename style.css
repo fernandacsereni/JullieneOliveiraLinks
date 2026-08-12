@@ -55,6 +55,8 @@ body {
 
 @media (max-width: 768px) {
     html {
+        background-position: center top;
+        background-size: 300% auto;
         background-image: var(--bg-url-mobile);
     }
 }
