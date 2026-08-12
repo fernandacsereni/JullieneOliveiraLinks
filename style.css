@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-url: url('./assets/bg-desk.png');
+    --swich-bg-url: url('./assets/sun.svg');
+    --switch-button-hover: rgba(197, 197, 197, 0.5);
+    --switch-img-hover: rgba(197, 197, 197, 0.5);
+    --social-links: white;
+    --social-links-hover: rgba(197, 197, 197, 0.5);
+    --animation-img:brightness(none) contrast(none);
+    --social-links-bg: rgba(255, 255, 255, 0.363);
+    --footer-link-color: white;
+    --footer-color:white; 
+     
+}
+
+.dark{
+    --bg-url: url('./assets/bg-desk-dark.png');
+    --swich-bg-url: url('./assets/monstar.svg');
+    --switch-button-hover: rgba(0, 0, 0, 0.5);
+    --switch-img-hover: rgba(0, 0, 0, 0.5);
+    --social-links: violet;
+    --social-links-hover: rgba(0, 0, 0, 0.5);
+    --animation-img:brightness(0.7) contrast(1.1);
+    --social-links-bg: rgba(0, 0, 0, 0.5); 
+    --footer-link-color: white;
+    --footer-color: rgb(211, 211, 211); 
+  }
+
+  body{
+    background: var(--bg-url) no-repeat top center/cover;
+
+  }
+
+body {
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: arial, sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 150vh;
+    padding: 40px 20px;
+
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;   
+    margin: 200px auto;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 0px 0px;
+  
+}
+
+h1{
+    display: flex;
+    box-align: center;
+    background-color: rgba(255, 255, 255, 0.363);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    color: black;
+    font-size: 30px;
+    margin-bottom: 5px;
+    padding: 5px;    
+    text-align: center;
+}
+
+p{
+    width: fit-content;
+    max-width: 250px;
+    background-color: rgba(15, 15, 15, 0.144);
+    backdrop-filter: blur(10px);
+    box-shadow: 10px 4px 30px rgba(0, 0, 0, 0.253);
+    color: white;   
+    font-size: 10px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.switch {
+    position: relative;
+    width: 50px;
+    height: 20px;
+    background-color: #f7f7f71c;
+    border: 1px solid #ffffff;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+#switchbutton {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    background: white var(--swich-bg-url) no-repeat center;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+    animation: slide-back 0.2s;
+}
+
+.dark #switchbutton{
+    transform: translateY(-50%) translateX(30px);
+    animation: slide-in 0.2s forwards;
+}
+
+#switchbutton:hover{
+    outline: 5px solid var(--switch-button-hover);
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    max-width: 250px;
+    width: 100%;
+    padding: 20px 0 0 0;
+    
+}
+li{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+li img{
+    max-width: 100%;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    filter: var(--animation-img);
+    transition: transform 0.3s ease;
+}
+
+ul li img:hover {
+    outline: 3px solid var(--switch-img-hover);
+    transform: scale(1.1);
+    position: relative;
+    z-index: 10;
+}
+
+#social-links{
+    display: inline-flex;
+    padding: 20px 0 0 0;
+    gap: 10px;
+
+}
+
+#social-links a{
+    justify-content: center;
+    color: var(--social-links);
+    background-color: var(--social-links-bg);
+    background-size: 20px 5px;
+    border-radius: 50%;
+    display: inline-flex;
+    
+}
+
+#social-links a:hover{
+    border-radius: 20px;
+    transform: scale(1.1);
+    outline: 5px solid var(--social-links-hover);
+
+}
+
+footer{
+    width: 400px;
+    display: inline;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: small;
+    color: var(--footer-color);
+    padding: 20px 0 0 0;
+    text-align: center;
+}
+
+footer a {
+    color: var(--footer-link-color);
+    font-weight: 800;
+    text-decoration: underline;
+}
