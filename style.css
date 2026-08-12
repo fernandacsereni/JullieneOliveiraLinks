@@ -14,7 +14,8 @@
     --animation-img:brightness(none) contrast(none);
     --social-links-bg: rgba(255, 255, 255, 0.363);
     --footer-link-color: white;
-    --footer-color:white; 
+    --footer-color:white;
+    --bg-url-mobile: url('./assets/bg-desk-mobile-mobile.png');
      
 }
 
@@ -29,6 +30,7 @@
     --social-links-bg: rgba(0, 0, 0, 0.5); 
     --footer-link-color: white;
     --footer-color: rgb(211, 211, 211); 
+    --bg-url-mobile:url('./assets/bg-desk-mobile.png');
   }
 
   body{
@@ -49,6 +51,12 @@ body {
     min-height: 150vh;
     padding: 40px 20px;
 
+}
+
+@media (max-width: 768px) {
+    html {
+        background-image: var(--bg-url-mobile);
+    }
 }
 
 header {
